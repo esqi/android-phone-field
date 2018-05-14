@@ -13,7 +13,7 @@ ext {
   siteUrl = 'https://github.com/lamudi-gmbh/android-phone-field'
   gitUrl = 'https://github.com/lamudi-gmbh/android-phone-field.git'
 
-  libraryVersion = '0.1.3'
+  libraryVersion = '0.2.0'
 
   developerId = 'ialmetwally'
   developerName = 'Ismail Almetwally'
@@ -25,14 +25,14 @@ ext {
 }
 
 android {
-  compileSdkVersion 24
-  buildToolsVersion "24.0.1"
+  compileSdkVersion 27
+  buildToolsVersion "27.0.3"
 
   defaultConfig {
-    minSdkVersion 14
-    targetSdkVersion 24
-    versionCode 13
-    versionName "0.1.3"
+    minSdkVersion 15
+    targetSdkVersion 27
+    versionCode 14
+    versionName "0.2.0"
   }
   buildTypes {
     release {
@@ -43,11 +43,8 @@ android {
 }
 
 dependencies {
-  testCompile 'junit:junit:4.12'
-  compile 'com.android.support:appcompat-v7:24.1.1'
-  compile 'com.googlecode.libphonenumber:libphonenumber:7.3.1'
-  compile 'com.android.support:design:24.1.1'
+  testImplementation 'junit:junit:4.12'
+  api 'com.android.support:appcompat-v7:27.1.1'
+  api 'com.googlecode.libphonenumber:libphonenumber:8.9.5'
+  api 'com.android.support:design:27.1.1'
 }
-
-apply from : '../installv1.gradle'
-apply from : '../bintrayv1.gradle'
