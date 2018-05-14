@@ -22,13 +22,4 @@
       android:textColor="@color/pf_grey"
       />
 
-  <TextView
-      android:id="@+id/dial_code"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginLeft="@dimen/margin_medium"
-      android:layout_marginStart="@dimen/margin_medium"
-      android:textColor="@color/pf_grey_light"
-      />
-
 </LinearLayout>

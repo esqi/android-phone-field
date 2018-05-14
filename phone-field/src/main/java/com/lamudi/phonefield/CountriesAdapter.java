@@ -44,7 +44,6 @@ public class CountriesAdapter extends ArrayAdapter<Country> implements SpinnerAd
       convertView = mInflater.inflate(R.layout.item_country, parent, false);
       viewHolder = new ViewHolder();
       viewHolder.mName = (TextView) convertView.findViewById(R.id.name);
-      viewHolder.mDialCode = (TextView) convertView.findViewById(R.id.dial_code);
       viewHolder.mFlag = (ImageView) convertView.findViewById(R.id.flag);
       convertView.setTag(viewHolder);
     } else {
@@ -52,15 +51,13 @@ public class CountriesAdapter extends ArrayAdapter<Country> implements SpinnerAd
     }
     Country country = getItem(position);
     viewHolder.mFlag.setImageResource(country.getResId(getContext()));
-    viewHolder.mName.setText(country.getDisplayName());
-    viewHolder.mDialCode.setText(String.valueOf(country.getDialCode()));
+    viewHolder.mName.setText(country.getDisplayName()+" (+"+country.getDialCode()+")");
     return convertView;
 
   }
 
   private static class ViewHolder {
     TextView mName;
-    TextView mDialCode;
     ImageView mFlag;
   }
 }
