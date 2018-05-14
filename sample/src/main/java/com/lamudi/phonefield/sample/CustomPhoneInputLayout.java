@@ -28,6 +28,11 @@ public class CustomPhoneInputLayout extends PhoneInputLayout {
     init();
   }
 
+  public void setCountryCode(String countryCode){
+    mCountryCode = countryCode;
+    init();
+  }
+
   private void init() {
     setDefaultCountry(mCountryCode);
     setHint(R.string.phone_hint);
