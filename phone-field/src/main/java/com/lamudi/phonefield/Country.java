@@ -39,8 +39,6 @@ public class Country {
   }
 
   public int getResId(Context context) {
-    String name = String.format("country_flag_%s",mCode.toLowerCase());
-    final Resources resources = context.getResources();
-    return resources.getIdentifier(name, "drawable", context.getPackageName());
+    return context.getResources().getIdentifier(String.format("country_flag_%s",mCode.toLowerCase()), "drawable", context.getPackageName());
   }
 }

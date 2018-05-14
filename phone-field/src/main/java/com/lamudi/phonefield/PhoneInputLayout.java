@@ -17,6 +17,8 @@ public class PhoneInputLayout extends PhoneField {
 
     private String mPrompt;
 
+    private String mHint;
+
     public PhoneInputLayout(Context context) {
         this(context, null);
     }
@@ -33,8 +35,8 @@ public class PhoneInputLayout extends PhoneField {
                 0, 0);
 
         try {
-            mPrompt = a.getString(R.styleable.PhoneInputLayout_prompt);
-            getSpinner().setPrompt(mPrompt);
+            setPrompt(a.getString(R.styleable.PhoneInputLayout_prompt));
+            setHint(a.getString(R.styleable.PhoneInputLayout_hint));
         } finally {
             a.recycle();
         }
@@ -61,7 +63,19 @@ public class PhoneInputLayout extends PhoneField {
 
     @Override
     public void setHint(int resId) {
-        mTextInputLayout.setHint(getContext().getString(resId));
+        mHint = getContext().getString(resId);
+        mTextInputLayout.setHint(mHint);
+    }
+
+    @Override
+    public void setHint(String hint) {
+        mHint = hint;
+        mTextInputLayout.setHint(mHint);
+    }
+
+    public void setPrompt(String prompt){
+        this.mPrompt = prompt;
+        getSpinner().setPrompt(mPrompt);
     }
 
     @Override

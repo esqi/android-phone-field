@@ -2,5 +2,6 @@
 <resources>
     <declare-styleable name="PhoneInputLayout">
         <attr name="prompt" format="string" />
+        <attr name="hint" format="string" />
     </declare-styleable>
 </resources>

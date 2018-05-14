@@ -25,9 +25,7 @@ public class MainActivity extends AppCompatActivity {
         assert phoneInputLayout != null;
         assert button != null;
 
-        phoneInputLayout.setHint(R.string.phone_hint);
         phoneInputLayout.setDefaultCountry("ID");
-
         customPhoneInputLayout.setCountryCode("ID");
 
         button.setOnClickListener(new View.OnClickListener() {

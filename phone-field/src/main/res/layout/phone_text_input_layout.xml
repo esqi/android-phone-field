@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:tag="@string/com_lamudi_phonefield_edittext"
-            android:textColor="@color/pf_grey"
+            android:textColor="@color/pf_grey_2"
             android:textSize="@dimen/text_size" />
     </android.support.design.widget.TextInputLayout>
 

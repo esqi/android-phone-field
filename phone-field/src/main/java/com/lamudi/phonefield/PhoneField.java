@@ -256,6 +256,15 @@ public abstract class PhoneField extends LinearLayout {
     }
 
     /**
+     * Sets hint.
+     *
+     * @param hint the hint
+     */
+    public void setHint(String hint) {
+        mEditText.setHint(hint);
+    }
+
+    /**
      * Gets raw input.
      *
      * @return the raw input
