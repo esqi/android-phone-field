@@ -4,7 +4,7 @@
   <dimen name="spinner_width">72dp</dimen>
   <dimen name="text_size">16sp</dimen>
 
-  <dimen name="flag_size">24dp</dimen>
+  <dimen name="flag_size">18dp</dimen>
 
   <dimen name="margin_large">16dp</dimen>
   <dimen name="margin_medium">8dp</dimen>
